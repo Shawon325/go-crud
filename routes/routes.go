@@ -11,7 +11,10 @@ func Routes() http.Handler {
 	routes := chi.NewRouter()
 
 	routes.Get("/", func(response http.ResponseWriter, request *http.Request) {
-		response.Write([]byte("Welcome to Go CRUD API, Shawon"))
+		_, err := response.Write([]byte("Welcome to Go CRUD API, Shawon"))
+		if err != nil {
+			return
+		}
 	})
 
 	routes.Get("/users", controllers.Get)
