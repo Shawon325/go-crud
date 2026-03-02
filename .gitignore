@@ -144,4 +144,6 @@ lenslocked
 
 go.sum
 
+.env
+
 # End of https://www.toptal.com/developers/gitignore/api/go,macos,goland,visualstudiocode
